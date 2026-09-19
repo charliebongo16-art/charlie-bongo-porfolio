@@ -1,52 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Charlie Bongo</title>
+<title>Charlie Bongo | Personal Website</title>
 
 <style>
-body{
+*{
     margin:0;
-    font-family:Arial,sans-serif;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
     background:#111;
     color:white;
+    line-height:1.6;
 }
 
 header{
+    background:linear-gradient(135deg,#ff9800,#ff5722);
     text-align:center;
     padding:60px 20px;
-    background:linear-gradient(45deg,#ff9800,#ff5722);
 }
 
-header img{
-    width:150px;
-    height:150px;
+.profile-pic{
+    width:180px;
+    height:180px;
     border-radius:50%;
-    border:4px solid white;
+    border:5px solid white;
+    object-fit:cover;
 }
 
-section{
-    max-width:800px;
+header h1{
+    margin-top:15px;
+    font-size:40px;
+}
+
+header p{
+    font-size:18px;
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
     margin:auto;
-    padding:20px;
+    padding:30px 0;
 }
 
 .card{
     background:#222;
-    padding:20px;
-    margin:20px 0;
+    padding:25px;
+    margin-bottom:25px;
     border-radius:15px;
 }
 
-.social a{
-    display:inline-block;
-    margin:10px;
-    padding:10px 20px;
+h2{
+    color:#ff9800;
+    margin-bottom:15px;
+}
+
+.social-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.social-links a{
+    text-decoration:none;
     background:#ff9800;
     color:white;
-    text-decoration:none;
+    padding:12px 20px;
     border-radius:8px;
+    transition:0.3s;
+}
+
+.social-links a:hover{
+    background:#ff5722;
+}
+
+video{
+    width:100%;
+    border-radius:10px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    margin-top:30px;
 }
 </style>
 </head>
@@ -54,31 +97,55 @@ section{
 <body>
 
 <header>
-    <img src="profile.jpg" alt="Charlie Bongo">
+    <img src="profile.jpg" alt="Charlie Bongo" class="profile-pic">
     <h1>Charlie Bongo</h1>
-    <p>Forex Trader & Content Creator</p>
+    <p>Forex Trader • Content Creator • Entrepreneur</p>
 </header>
 
-<section>
+<div class="container">
+
     <div class="card">
         <h2>About Me</h2>
-        <p>Charlie Bongo is a person of totall respect.</p>
+        <p>
+            Charlie Bongo is a person of totall respect.
+            I am passionate about Forex trading, online business,
+            and content creation. Welcome to my personal website.
+        </p>
     </div>
 
     <div class="card">
         <h2>My Video</h2>
-        <video width="100%" controls>
+        <video controls>
             <source src="video.mp4" type="video/mp4">
+            Your browser does not support videos.
         </video>
     </div>
 
-    <div class="card social">
-        <h2>Connect With Me</h2>
-        <a href="https://www.facebook.com/share/18saDY7H25/">Facebook</a>
-        <a href="https://www.threads.com/@charliebongo55">Threads</a>
-        <a href="https://tiktok.com/@charliebongo273">TikTok</a>
+    <div class="card">
+        <h2>Contact Me</h2>
+        <p>Email: charliebongo16@gmail.com</p>
+        <p>WhatsApp: +254719663875</p>
     </div>
-</section>
+
+    <div class="card">
+        <h2>Follow Me</h2>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/18saDY7H25/" target="_blank">Facebook</a>
+
+            <a href="https://www.threads.com/@charliebongo55" target="_blank">Threads</a>
+
+            <a href="https://tiktok.com/@charliebongo273" target="_blank">TikTok</a>
+
+            <a href="https://wa.me/254719663875" target="_blank">WhatsApp</a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Charlie Bongo. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
