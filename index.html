@@ -10,7 +10,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
@@ -20,23 +20,29 @@ color:white;
 
 header{
 text-align:center;
-padding:60px 20px;
+padding:40px 20px;
 background:linear-gradient(135deg,#2563eb,#7c3aed);
 }
 
+.logo{
+max-width:450px;
+width:100%;
+border-radius:10px;
+}
+
 header h1{
-font-size:50px;
-margin-bottom:10px;
+margin-top:20px;
+font-size:40px;
 }
 
 header p{
-font-size:20px;
+font-size:18px;
 }
 
-section{
-padding:50px 20px;
+.container{
 max-width:1000px;
 margin:auto;
+padding:20px;
 }
 
 .card{
@@ -47,38 +53,30 @@ margin-bottom:20px;
 }
 
 h2{
-margin-bottom:15px;
 color:#60a5fa;
+margin-bottom:15px;
 }
 
-.video-box{
+video{
 width:100%;
-height:400px;
-background:#111827;
-border-radius:15px;
-display:flex;
-justify-content:center;
-align-items:center;
-color:#94a3b8;
-font-size:20px;
+border-radius:10px;
 }
 
-.social-links{
+.social{
 display:flex;
 flex-wrap:wrap;
-gap:15px;
+gap:10px;
 }
 
-.social-links a{
+.social a{
 text-decoration:none;
 background:#2563eb;
 color:white;
 padding:12px 20px;
 border-radius:8px;
-transition:0.3s;
 }
 
-.social-links a:hover{
+.social a:hover{
 background:#1d4ed8;
 }
 
@@ -94,29 +92,37 @@ margin-top:30px;
 <body>
 
 <header>
+
+<img src="file_00000000fb08...f1.png" alt="Charlie Bongo Logo">
+
 <h1>Charlie Bongo</h1>
 <p>Forex Trader | Content Creator</p>
+
 </header>
 
-<section>
+<div class="container">
 
 <div class="card">
 <h2>About Me</h2>
 <p>
-Charlie Bongo is a person of totall respect. I am passionate about
-Forex trading, content creation and connecting with people online.
+Charlie Bongo is a person of totall respect.
+I am passionate about Forex trading, content creation,
+and building my online presence.
 </p>
 </div>
 
 <div class="card">
-<h2>My Video</h2>
-<div class="video-box">
-Upload your video here
-</div>
+<h2>Featured Video</h2>
+
+<video controls>
+<source src="video.mp4" type="video/mp4">
+Your browser does not support video playback.
+</video>
+
 </div>
 
 <div class="card">
-<h2>Contact</h2>
+<h2>Contact Me</h2>
 <p>Email: charliebongo16@gmail.com</p>
 <p>WhatsApp: +254719663875</p>
 </div>
@@ -124,7 +130,8 @@ Upload your video here
 <div class="card">
 <h2>Follow Me</h2>
 
-<div class="social-links">
+<div class="social">
+
 <a href="https://www.facebook.com/share/18saDY7H25/" target="_blank">Facebook</a>
 
 <a href="https://www.threads.com/@charliebongo55" target="_blank">Threads</a>
@@ -132,14 +139,15 @@ Upload your video here
 <a href="https://www.tiktok.com/@charliebongo273" target="_blank">TikTok</a>
 
 <a href="https://wa.me/254719663875" target="_blank">WhatsApp</a>
-</div>
 
 </div>
 
-</section>
+</div>
+
+</div>
 
 <footer>
-<p>© 2026 Charlie Bongo. All Rights Reserved.</p>
+© 2026 Charlie Bongo | All Rights Reserved
 </footer>
 
 </body>
