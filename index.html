@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,98 +7,78 @@
 
 <style>
 body{
-    font-family: Arial, sans-serif;
-    background:#f4f4f4;
     margin:0;
-    padding:0;
-    text-align:center;
-}
-header{
-    background:#007bff;
+    font-family:Arial,sans-serif;
+    background:#111;
     color:white;
-    padding:30px;
 }
-.container{
-    width:90%;
-    max-width:900px;
+
+header{
+    text-align:center;
+    padding:60px 20px;
+    background:linear-gradient(45deg,#ff9800,#ff5722);
+}
+
+header img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border:4px solid white;
+}
+
+section{
+    max-width:800px;
     margin:auto;
     padding:20px;
 }
-.profile{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    object-fit:cover;
-}
+
 .card{
-    background:white;
+    background:#222;
     padding:20px;
     margin:20px 0;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    border-radius:15px;
 }
-a{
-    text-decoration:none;
-    color:#007bff;
-    display:block;
+
+.social a{
+    display:inline-block;
     margin:10px;
-}
-video{
-    width:100%;
-    max-width:700px;
-    border-radius:10px;
-}
-footer{
-    background:#222;
+    padding:10px 20px;
+    background:#ff9800;
     color:white;
-    padding:15px;
-    margin-top:20px;
+    text-decoration:none;
+    border-radius:8px;
 }
 </style>
 </head>
+
 <body>
 
 <header>
+    <img src="profile.jpg" alt="Charlie Bongo">
     <h1>Charlie Bongo</h1>
     <p>Forex Trader & Content Creator</p>
 </header>
 
-<div class="container">
-
+<section>
     <div class="card">
-        <img src="profile.jpg" alt="Charlie Bongo" class="profile">
         <h2>About Me</h2>
         <p>Charlie Bongo is a person of totall respect.</p>
-        <p><strong>Interest:</strong> Forex Trading</p>
-        <p><strong>Email:</strong> charliebongo16@gmail.com</p>
     </div>
 
     <div class="card">
         <h2>My Video</h2>
-        <video controls>
-            <source src="myvideo.mp4" type="video/mp4">
-            Your browser does not support video.
+        <video width="100%" controls>
+            <source src="video.mp4" type="video/mp4">
         </video>
     </div>
 
-    <div class="card">
-        <h2>Social Media</h2>
-
-        <a href="https://www.facebook.com/share/18saDY7H25/" target="_blank">Facebook</a>
-
-        <a href="https://www.threads.com/@charliebongo55" target="_blank">Threads</a>
-
-        <a href="https://www.tiktok.com/@charliebongo273" target="_blank">TikTok</a>
-
-        <a href="https://wa.me/254719663875" target="_blank">WhatsApp</a>
-
+    <div class="card social">
+        <h2>Connect With Me</h2>
+        <a href="https://www.facebook.com/share/18saDY7H25/">Facebook</a>
+        <a href="https://www.threads.com/@charliebongo55">Threads</a>
+        <a href="https://tiktok.com/@charliebongo273">TikTok</a>
     </div>
-
-</div>
-
-<footer>
-    <p>© 2026 Charlie Bongo. All Rights Reserved.</p>
-</footer>
+</section>
 
 </body>
 </html>
