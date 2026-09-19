@@ -7,125 +7,94 @@
 
 <style>
 body{
-    margin:0;
-    font-family:Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background:#f4f4f4;
-    color:#333;
-}
-
-header{
-    background:#071633;
-    color:white;
+    margin:0;
+    padding:0;
     text-align:center;
-    padding:50px 20px;
 }
-
-.profile-pic{
+header{
+    background:#007bff;
+    color:white;
+    padding:30px;
+}
+.container{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+.profile{
     width:180px;
     height:180px;
     border-radius:50%;
-    border:5px solid white;
     object-fit:cover;
 }
-
-section{
+.card{
     background:white;
-    margin:20px;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-h1,h2{
-    margin-top:0;
-}
-
-.social-links a{
-    display:inline-block;
-    margin:10px;
-    padding:12px 20px;
-    background:#071633;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-}
-
-.social-links a:hover{
-    background:#0d2555;
-}
-
-footer{
-    background:#071633;
-    color:white;
-    text-align:center;
     padding:20px;
+    margin:20px 0;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+a{
+    text-decoration:none;
+    color:#007bff;
+    display:block;
+    margin:10px;
+}
+video{
+    width:100%;
+    max-width:700px;
+    border-radius:10px;
+}
+footer{
+    background:#222;
+    color:white;
+    padding:15px;
+    margin-top:20px;
 }
 </style>
 </head>
-
 <body>
 
 <header>
-    <img src="profile.jpg" alt="Charlie Bongo" class="profile-pic">
     <h1>Charlie Bongo</h1>
-    <p>Welcome to my personal website.</p>
+    <p>Forex Trader & Content Creator</p>
 </header>
 
-<section>
-    <h2>About Me</h2>
-    <p>
-        Charlie Bongo is a person of total respect.
-        I am interested in Forex trading, online business,
-        technology, and content creation.
-    </p>
-</section>
+<div class="container">
 
-<section>
-    <h2>Forex Journey</h2>
-    <p>
-        I am passionate about learning Forex trading and
-        improving my trading knowledge every day.
-    </p>
-</section>
+    <div class="card">
+        <img src="profile.jpg" alt="Charlie Bongo" class="profile">
+        <h2>About Me</h2>
+        <p>Charlie Bongo is a person of totall respect.</p>
+        <p><strong>Interest:</strong> Forex Trading</p>
+        <p><strong>Email:</strong> charliebongo16@gmail.com</p>
+    </div>
 
-<section>
-    <h2>Content Creation</h2>
-    <p>
-        I create and share content about Forex, technology,
-        online business, and personal growth.
-    </p>
-</section>
+    <div class="card">
+        <h2>My Video</h2>
+        <video controls>
+            <source src="myvideo.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+    </div>
 
-<section>
-    <h2>Skills & Interests</h2>
-    <ul>
-        <li>Forex Trading</li>
-        <li>Affiliate Marketing</li>
-        <li>Content Creation</li>
-        <li>Technology</li>
-        <li>Online Business</li>
-    </ul>
-</section>
+    <div class="card">
+        <h2>Social Media</h2>
 
-<section>
-    <h2>Connect With Me</h2>
-
-    <div class="social-links">
         <a href="https://www.facebook.com/share/18saDY7H25/" target="_blank">Facebook</a>
-
-        <a href="https://tiktok.com/@charliebongo273" target="_blank">TikTok</a>
 
         <a href="https://www.threads.com/@charliebongo55" target="_blank">Threads</a>
 
-        <a href="https://wa.me/254719663875" target="_blank">WhatsApp</a>
-    </div>
-</section>
+        <a href="https://www.tiktok.com/@charliebongo273" target="_blank">TikTok</a>
 
-<section>
-    <h2>Contact Me</h2>
-    <p>Email: charliebongo16@gmail.com</p>
-    <p>WhatsApp: +254719663875</p>
-</section>
+        <a href="https://wa.me/254719663875" target="_blank">WhatsApp</a>
+
+    </div>
+
+</div>
 
 <footer>
     <p>© 2026 Charlie Bongo. All Rights Reserved.</p>
