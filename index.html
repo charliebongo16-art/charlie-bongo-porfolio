@@ -3,208 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Charlie Bongo Forex Academy</title>
-
+<title>Forex Academy | Charlie Bongo</title>
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
-
-body{
-    background:#050b1a;
-    color:white;
-}
-
-header{
-    text-align:center;
-    padding:40px 20px;
-}
-
-.profile-img{
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    object-fit:cover;
-    border:4px solid #00ff88;
-}
-
-h1{
-    margin-top:15px;
-    color:#00ff88;
-}
-
-.about{
-    max-width:800px;
-    margin:auto;
-    padding:20px;
-    text-align:center;
-    line-height:1.8;
-}
-
-section{
-    padding:20px;
-}
-
-section h2{
-    color:#00ff88;
-    margin-bottom:20px;
-}
-
-.card{
-    background:#101827;
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:20px;
-}
-
-.card h3{
-    margin-bottom:15px;
-}
-
-.card p{
-    line-height:1.8;
-}
-
-.video-section{
-    text-align:center;
-}
-
-.video-section video{
-    width:100%;
-    max-width:800px;
-    border-radius:15px;
-}
-
-.socials{
-    text-align:center;
-    padding:30px;
-}
-
-.socials a{
-    display:inline-block;
-    margin:10px;
-    color:white;
-    background:#00ff88;
-    color:black;
-    text-decoration:none;
-    padding:12px 20px;
-    border-radius:10px;
-    font-weight:bold;
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    background:#101827;
-    margin-top:30px;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#000;color:#fff;overflow-x:hidden}
+header{padding:20px;text-align:center;border-bottom:2px solid #00ff66;background:#050505}
+.hero{min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#000,#05210d)}
+.hero h1{font-size:4rem;color:#00ff66;text-shadow:0 0 20px #00ff66}
+.hero p{margin:20px 0}
+.btn{display:inline-block;padding:14px 28px;background:#00ff66;color:#000;text-decoration:none;border-radius:10px;font-weight:bold}
+.section{max-width:1200px;margin:auto;padding:60px 20px}
+.section h2{text-align:center;color:#00ff66;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#111;border:1px solid #00ff66;border-radius:15px;padding:25px;box-shadow:0 0 15px rgba(0,255,102,.25)}
+.card:hover{box-shadow:0 0 30px rgba(0,255,102,.6)}
+.price{font-size:2.5rem;color:#00ff66;margin:10px 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
+.stat{text-align:center;background:#111;padding:20px;border-radius:15px;border:1px solid #00ff66}
+footer{text-align:center;padding:30px;border-top:1px solid #00ff66}
+.social a{display:inline-block;margin:8px;padding:10px 18px;background:#00ff66;color:#000;text-decoration:none;border-radius:8px}
+.whatsapp{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;padding:15px;border-radius:50%;text-decoration:none}
 </style>
 </head>
-
 <body>
 
 <header>
-
-<!-- Replace profile.jpg with your uploaded image name -->
-<img src="file_00000000fb088210827630b873923af1.png" alt="Charlie Bongo" class="profile-img">
-
-<h1>Charlie Bongo</h1>
-
-<p>Forex Trader | Financial Education | Market Analysis</p>
-
+<h2>Forex Academy | Charlie Bongo</h2>
 </header>
 
-<section class="about">
-<h2>About Me</h2>
-
-<p>
-Charlie Bongo is a person of total respect and a passionate Forex enthusiast.
-This platform is dedicated to sharing financial education, trading knowledge,
-market analysis, and useful trading resources to help traders grow their skills
-and understanding of the financial markets.
-</p>
-
+<section class="hero">
+<div>
+<h1>FOREX ACADEMY</h1>
+<p>Financial Education • Forex Trading • Content Creation</p>
+<a class="btn" href="https://wa.me/254719663875">Join WhatsApp</a>
+</div>
 </section>
 
-<section>
+<section class="section">
+<h2>Statistics</h2>
+<div class="stats">
+<div class="stat"><h3>500+</h3><p>Students Reached</p></div>
+<div class="stat"><h3>24/7</h3><p>Learning Access</p></div>
+<div class="stat"><h3>3</h3><p>Trading Systems</p></div>
+<div class="stat"><h3>100%</h3><p>Financial Education</p></div>
+</div>
+</section>
 
+<section class="section">
+<h2>Premium Learning Plans</h2>
+<div class="grid">
+<div class="card">
+<h3>Starter</h3>
+<div class="price">FREE</div>
+<p>Forex Basics, Market Structure, Community Access</p>
+</div>
+<div class="card">
+<h3>Pro Trader</h3>
+<div class="price">$49</div>
+<p>Advanced Strategies, Live Analysis, Risk Management</p>
+</div>
+<div class="card">
+<h3>VIP Mentorship</h3>
+<div class="price">$99</div>
+<p>1-on-1 Coaching, Weekly Sessions, Priority Support</p>
+</div>
+</div>
+</section>
+
+<section class="section">
 <h2>Trading Highlights</h2>
-
-<div class="card">
-<h3>Financial Education</h3>
-
-<p>
-Learn Forex trading from the basics to advanced concepts including market
-structure, trend analysis, risk management, and trading psychology.
-Education is the foundation of long-term success in financial markets.
-Through practical lessons and insights, traders can build confidence and
-develop disciplined trading habits.
-</p>
-
+<div class="grid">
+<div class="card"><h3>Market Analysis</h3><p>Learn trend analysis and price action.</p></div>
+<div class="card"><h3>Risk Management</h3><p>Protect capital using proper risk management.</p></div>
+<div class="card"><h3>Financial Education</h3><p>Build strong financial habits and knowledge.</p></div>
+<div class="card"><h3>Content Creation</h3><p>Grow your personal brand online.</p></div>
 </div>
-
-<div class="card">
-<h3>Market Analysis</h3>
-
-<p>
-Explore daily market insights, technical analysis, support and resistance
-levels, trend identification, and price action strategies.
-Understanding market behavior helps traders make informed decisions and
-improve their ability to identify potential opportunities.
-</p>
-
-</div>
-
-<div class="card">
-<h3>Trading Resources</h3>
-
-<p>
-Access valuable trading resources including educational guides,
-economic calendars, risk calculators, trading platforms, and learning
-materials designed to support traders at every stage of their journey.
-These tools can help improve consistency and overall trading performance.
-</p>
-
-</div>
-
 </section>
 
-<section class="video-section">
-
-<h2>Featured Video</h2>
-
-<!-- Replace forex-video.mp4 with your video filename -->
-<video controls>
-<source src="screen-recording-app-1788869778379.mp4" type="video/mp4">
-Your browser does not support video playback.
-</video>
-
-</section>
-
-<section class="socials">
-
-<h2>Connect With Me</h2>
-
-<a href="https://www.facebook.com/share/18saDY7H25/" target="_blank">Facebook</a>
-
-<a href="https://www.threads.com/@charliebongo55" target="_blank">Threads</a>
-
-<a href="https://tiktok.com/@charliebongo273" target="_blank">TikTok</a>
-
-<a href="https://wa.me/254719663875" target="_blank">WhatsApp</a>
-
+<section class="section social">
+<h2>Follow Charlie Bongo</h2>
+<a href="https://www.facebook.com/share/18saDY7H25/">Facebook</a>
+<a href="https://www.threads.com/@charliebongo55">Threads</a>
+<a href="https://www.tiktok.com/@charliebongo273">TikTok</a>
+<a href="https://wa.me/254719663875">WhatsApp</a>
 </section>
 
 <footer>
-
 <p>Email: charliebongo16@gmail.com</p>
-
-<p>© 2026 Charlie Bongo Forex Academy. All Rights Reserved.</p>
-
+<p>© Forex Academy | Charlie Bongo</p>
 </footer>
+
+<a class="whatsapp" href="https://wa.me/254719663875">💬</a>
 
 </body>
 </html>
