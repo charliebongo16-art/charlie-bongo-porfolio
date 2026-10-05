@@ -3,97 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forex Academy | Charlie Bongo</title>
+<title>Forex Academy - Charlie Bongo</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#000;color:#fff;overflow-x:hidden}
-header{padding:20px;text-align:center;border-bottom:2px solid #00ff66;background:#050505}
-.hero{min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#000,#05210d)}
-.hero h1{font-size:4rem;color:#00ff66;text-shadow:0 0 20px #00ff66}
-.hero p{margin:20px 0}
-.btn{display:inline-block;padding:14px 28px;background:#00ff66;color:#000;text-decoration:none;border-radius:10px;font-weight:bold}
-.section{max-width:1200px;margin:auto;padding:60px 20px}
-.section h2{text-align:center;color:#00ff66;margin-bottom:30px}
+body{margin:0;font-family:Arial,sans-serif;background:#0b1020;color:#fff;overflow-x:hidden}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+background:linear-gradient(-45deg,#0ea5e9,#2563eb,#7c3aed,#06b6d4);background-size:400% 400%;animation:bg 12s ease infinite}
+@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+h1{font-size:4rem;text-shadow:0 0 20px rgba(255,255,255,.7)}
+.glow{box-shadow:0 0 25px rgba(14,165,233,.8)}
+.btn{padding:15px 30px;background:#0ea5e9;color:#fff;text-decoration:none;border-radius:10px}
+section{padding:60px 20px;max-width:1200px;margin:auto}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{background:#111;border:1px solid #00ff66;border-radius:15px;padding:25px;box-shadow:0 0 15px rgba(0,255,102,.25)}
-.card:hover{box-shadow:0 0 30px rgba(0,255,102,.6)}
-.price{font-size:2.5rem;color:#00ff66;margin:10px 0}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
-.stat{text-align:center;background:#111;padding:20px;border-radius:15px;border:1px solid #00ff66}
-footer{text-align:center;padding:30px;border-top:1px solid #00ff66}
-.social a{display:inline-block;margin:8px;padding:10px 18px;background:#00ff66;color:#000;text-decoration:none;border-radius:8px}
-.whatsapp{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;padding:15px;border-radius:50%;text-decoration:none}
+.card{background:rgba(255,255,255,.08);backdrop-filter:blur(10px);padding:25px;border-radius:20px}
+.price{font-size:2rem;font-weight:bold}
+.counter{font-size:3rem;font-weight:bold}
+form input,form textarea{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:none}
+form button{padding:12px 20px;border:none;border-radius:8px}
+footer{text-align:center;padding:30px;background:#050814}
 </style>
 </head>
 <body>
-
-<header>
-<h2>Forex Academy | Charlie Bongo</h2>
-</header>
-
-<section class="hero">
-<div>
-<h1>FOREX ACADEMY</h1>
-<p>Financial Education • Forex Trading • Content Creation</p>
-<a class="btn" href="https://wa.me/254719663875">Join WhatsApp</a>
+<div class="hero">
+<h1>Forex Academy</h1>
+<p>Charlie Bongo • Learn Forex • Build Wealth • Master Trading</p>
+<a class="btn glow" href="#plans">Get Started</a>
 </div>
-</section>
 
-<section class="section">
-<h2>Statistics</h2>
-<div class="stats">
-<div class="stat"><h3>500+</h3><p>Students Reached</p></div>
-<div class="stat"><h3>24/7</h3><p>Learning Access</p></div>
-<div class="stat"><h3>3</h3><p>Trading Systems</p></div>
-<div class="stat"><h3>100%</h3><p>Financial Education</p></div>
-</div>
-</section>
-
-<section class="section">
-<h2>Premium Learning Plans</h2>
+<section>
+<h2>Community Statistics</h2>
 <div class="grid">
-<div class="card">
-<h3>Starter</h3>
-<div class="price">FREE</div>
-<p>Forex Basics, Market Structure, Community Access</p>
-</div>
-<div class="card">
-<h3>Pro Trader</h3>
-<div class="price">$49</div>
-<p>Advanced Strategies, Live Analysis, Risk Management</p>
-</div>
-<div class="card">
-<h3>VIP Mentorship</h3>
-<div class="price">$99</div>
-<p>1-on-1 Coaching, Weekly Sessions, Priority Support</p>
-</div>
+<div class="card"><div class="counter">234+</div>TikTok Followers</div>
+<div class="card"><div class="counter">17+</div>Facebook Followers</div>
+<div class="card"><div class="counter">100+</div>Trading Lessons</div>
 </div>
 </section>
 
-<section class="section">
+<section>
 <h2>Trading Highlights</h2>
 <div class="grid">
-<div class="card"><h3>Market Analysis</h3><p>Learn trend analysis and price action.</p></div>
-<div class="card"><h3>Risk Management</h3><p>Protect capital using proper risk management.</p></div>
-<div class="card"><h3>Financial Education</h3><p>Build strong financial habits and knowledge.</p></div>
-<div class="card"><h3>Content Creation</h3><p>Grow your personal brand online.</p></div>
+<div class="card">Risk Management</div>
+<div class="card">Market Analysis</div>
+<div class="card">Trading Psychology</div>
 </div>
 </section>
 
-<section class="section social">
-<h2>Follow Charlie Bongo</h2>
-<a href="https://www.facebook.com/share/18saDY7H25/">Facebook</a>
-<a href="https://www.threads.com/@charliebongo55">Threads</a>
-<a href="https://www.tiktok.com/@charliebongo273">TikTok</a>
-<a href="https://wa.me/254719663875">WhatsApp</a>
+<section id="plans">
+<h2>Pricing Plans</h2>
+<div class="grid">
+<div class="card glow"><h3>Basic</h3><div class="price">FREE</div><p>Forex Basics</p></div>
+<div class="card glow"><h3>Pro</h3><div class="price">KES 500</div><p>Signals & Mentorship</p></div>
+<div class="card glow"><h3>VIP</h3><div class="price">KES 1500</div><p>Premium Coaching</p></div>
+</div>
+</section>
+
+<section>
+<h2>Affiliate Hub</h2>
+<div class="card">
+<p>Add your affiliate links here for trading tools, courses, and recommended products.</p>
+</div>
+</section>
+
+<section>
+<h2>M-Pesa Payments</h2>
+<div class="card">
+<p><strong>Paybill / Number:</strong> +254719663875</p>
+</div>
+</section>
+
+<section>
+<h2>Withdrawal Request Form</h2>
+<div class="card">
+<form>
+<input type="text" placeholder="Full Name">
+<input type="tel" placeholder="M-Pesa Number">
+<input type="number" placeholder="Amount">
+<textarea placeholder="Notes"></textarea>
+<button type="submit">Submit Request</button>
+</form>
+</div>
 </section>
 
 <footer>
+<p>Charlie Bongo | Forex Academy</p>
 <p>Email: charliebongo16@gmail.com</p>
-<p>© Forex Academy | Charlie Bongo</p>
 </footer>
-
-<a class="whatsapp" href="https://wa.me/254719663875">💬</a>
-
 </body>
 </html>
