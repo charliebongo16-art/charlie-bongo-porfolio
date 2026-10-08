@@ -3,89 +3,558 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forex Academy - Charlie Bongo</title>
+<title>Charlie Bongo Forex Academy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#0b1020;color:#fff;overflow-x:hidden}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
-background:linear-gradient(-45deg,#0ea5e9,#2563eb,#7c3aed,#06b6d4);background-size:400% 400%;animation:bg 12s ease infinite}
-@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
-h1{font-size:4rem;text-shadow:0 0 20px rgba(255,255,255,.7)}
-.glow{box-shadow:0 0 25px rgba(14,165,233,.8)}
-.btn{padding:15px 30px;background:#0ea5e9;color:#fff;text-decoration:none;border-radius:10px}
-section{padding:60px 20px;max-width:1200px;margin:auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{background:rgba(255,255,255,.08);backdrop-filter:blur(10px);padding:25px;border-radius:20px}
-.price{font-size:2rem;font-weight:bold}
-.counter{font-size:3rem;font-weight:bold}
-form input,form textarea{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:none}
-form button{padding:12px 20px;border:none;border-radius:8px}
-footer{text-align:center;padding:30px;background:#050814}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050816;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:'';
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at 20% 20%,rgba(0,255,255,.15),transparent 30%),
+radial-gradient(circle at 80% 60%,rgba(0,255,0,.15),transparent 30%);
+animation:moveBg 15s linear infinite;
+z-index:-1;
+}
+
+@keyframes moveBg{
+0%{transform:translate(0,0);}
+50%{transform:translate(-50px,30px);}
+100%{transform:translate(0,0);}
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.5);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#00ffcc;
+text-shadow:0 0 15px #00ffcc;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#00ffcc;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+}
+
+.hero-content h1{
+font-size:4rem;
+margin-bottom:20px;
+background:linear-gradient(90deg,#00ffcc,#00ffff,#00ff66);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+filter:drop-shadow(0 0 10px #00ffcc);
+}
+to{
+filter:drop-shadow(0 0 30px #00ffff);
+}
+}
+
+.hero-content p{
+font-size:1.2rem;
+max-width:700px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 40px;
+background:#00ffcc;
+color:#000;
+font-weight:bold;
+border-radius:30px;
+text-decoration:none;
+box-shadow:0 0 20px #00ffcc;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 35px #00ffcc;
+}
+
+.stats{
+padding:80px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.stat-card{
+background:rgba(255,255,255,.05);
+padding:30px;
+border-radius:20px;
+text-align:center;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.1);
+transition:.3s;
+}
+
+.stat-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(0,255,204,.5);
+}
+
+.stat-card h2{
+font-size:2.5rem;
+color:#00ffcc;
+}
+
+.stat-card p{
+margin-top:10px;
+}
+
+.section-title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:50px;
+color:#00ffcc;
+}
+
+.about{
+padding:100px 8%;
+text-align:center;
+}
+
+.about p{
+max-width:900px;
+margin:auto;
+line-height:1.8;
+font-size:1.1rem;
+}
+
+.socials{
+padding:100px 8%;
+text-align:center;
+}
+
+.social-links{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.social-links a{
+padding:15px 25px;
+background:rgba(255,255,255,.05);
+border-radius:15px;
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+.social-links a:hover{
+background:#00ffcc;
+color:black;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#000;
+margin-top:50px;
+}
 </style>
 </head>
+
 <body>
-<div class="hero">
-<h1>Forex Academy</h1>
-<p>Charlie Bongo • Learn Forex • Build Wealth • Master Trading</p>
-<a class="btn glow" href="#plans">Get Started</a>
-</div>
 
-<section>
-<h2>Community Statistics</h2>
-<div class="grid">
-<div class="card"><div class="counter">234+</div>TikTok Followers</div>
-<div class="card"><div class="counter">17+</div>Facebook Followers</div>
-<div class="card"><div class="counter">100+</div>Trading Lessons</div>
-</div>
-</section>
+<nav>
+<div class="logo">Charlie Bongo Forex Academy</div>
 
-<section>
-<h2>Trading Highlights</h2>
-<div class="grid">
-<div class="card">Risk Management</div>
-<div class="card">Market Analysis</div>
-<div class="card">Trading Psychology</div>
-</div>
-</section>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#socials">Socials</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
-<section id="plans">
-<h2>Pricing Plans</h2>
-<div class="grid">
-<div class="card glow"><h3>Basic</h3><div class="price">FREE</div><p>Forex Basics</p></div>
-<div class="card glow"><h3>Pro</h3><div class="price">KES 500</div><p>Signals & Mentorship</p></div>
-<div class="card glow"><h3>VIP</h3><div class="price">KES 1500</div><p>Premium Coaching</p></div>
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Master Forex Trading</h1>
+
+<p>
+Learn professional trading strategies,
+risk management and financial education
+with Charlie Bongo Forex Academy.
+</p>
+
+<a href="#about" class="btn">Start Learning</a>
 </div>
 </section>
 
-<section>
-<h2>Affiliate Hub</h2>
-<div class="card">
-<p>Add your affiliate links here for trading tools, courses, and recommended products.</p>
+<section class="stats">
+
+<div class="stat-card">
+<h2>500+</h2>
+<p>Students Trained</p>
 </div>
+
+<div class="stat-card">
+<h2>95%</h2>
+<p>Learning Satisfaction</p>
+</div>
+
+<div class="stat-card">
+<h2>24/7</h2>
+<p>Forex Education</p>
+</div>
+
+<div class="stat-card">
+<h2>3+</h2>
+<p>Trading Highlights</p>
+</div>
+
 </section>
 
-<section>
-<h2>M-Pesa Payments</h2>
-<div class="card">
-<p><strong>Paybill / Number:</strong> +254719663875</p>
-</div>
+<section class="about" id="about">
+<h2 class="section-title">About Me</h2>
+
+<p>
+Charlie Bongo is a person of total respect and a passionate Forex educator dedicated to helping new traders understand the financial markets. The academy focuses on technical analysis, risk management and building long-term trading discipline.
+</p>
+
 </section>
 
-<section>
-<h2>Withdrawal Request Form</h2>
-<div class="card">
+<section class="socials" id="socials">
+
+<h2 class="section-title">Connect With Me</h2>
+
+<div class="social-links">
+
+<a href="https://www.facebook.com/share/18saDY7H25/" target="_blank">Facebook</a>
+
+<a href="https://www.threads.com/@charliebongo55" target="_blank">Threads</a>
+
+<a href="https://www.tiktok.com/@charliebongo273" target="_blank">TikTok</a>
+
+<a href="https://wa.me/254719663875" target="_blank">WhatsApp</a>
+
+<a href="mailto:charliebongo16@gmail.com">Email</a>
+
+</div>
+</section>
+<!-- TRADING HIGHLIGHTS SECTION -->
+
+<section id="highlights" style="padding:100px 8%;">
+
+<h2 class="section-title">Trading Highlights</h2>
+
+<div class="stats">
+
+<div class="stat-card">
+<h2>Market Analysis</h2>
+<p>
+Learn how to analyze Forex charts using support and resistance,
+market structure, trend identification, candlestick patterns,
+and key price action concepts used by professional traders.
+</p>
+</div>
+
+<div class="stat-card">
+<h2>Risk Management</h2>
+<p>
+Protect your trading capital through proper position sizing,
+stop-loss placement, risk-to-reward ratios, and account
+management strategies designed for long-term growth.
+</p>
+</div>
+
+<div class="stat-card">
+<h2>Trading Psychology</h2>
+<p>
+Develop discipline, patience, and emotional control.
+Mastering psychology helps traders avoid revenge trading,
+overtrading, and emotional decision-making.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PRICING SECTION -->
+
+<section id="pricing" style="padding:100px 8%;">
+
+<h2 class="section-title">Academy Packages</h2>
+
+<div class="stats">
+
+<div class="stat-card">
+<h2>Starter</h2>
+<h3>KES 500</h3>
+<p>
+Basic Forex Introduction<br>
+Market Structure<br>
+Trading Basics<br>
+Community Access
+</p>
+</div>
+
+<div class="stat-card">
+<h2>Pro</h2>
+<h3>KES 1,500</h3>
+<p>
+Advanced Analysis<br>
+Risk Management<br>
+Trading Psychology<br>
+Private Support
+</p>
+</div>
+
+<div class="stat-card">
+<h2>VIP</h2>
+<h3>KES 3,000</h3>
+<p>
+Complete Forex Course<br>
+Trading Strategies<br>
+Signals & Mentorship<br>
+Priority Support
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- AFFILIATE SECTION -->
+
+<section id="affiliate" style="padding:100px 8%;">
+
+<h2 class="section-title">Affiliate Opportunities</h2>
+
+<div class="stat-card">
+
+<p>
+Join recommended affiliate programs and earn commissions
+by promoting products and services online.
+You can share affiliate links on your website,
+Facebook, TikTok, Threads, and WhatsApp.
+</p>
+
+<br>
+
+<p>
+Recommended Platforms:
+<br><br>
+✓ Digistore24
+<br>
+✓ Impact
+<br>
+✓ Jumia Affiliate
+<br>
+✓ Amazon Associates
+<br>
+✓ PartnerStack
+</p>
+
+</div>
+
+</section>
+
+<!-- MPESA PAYMENT SECTION -->
+
+<section id="payment" style="padding:100px 8%;">
+
+<h2 class="section-title">Payment Options</h2>
+
+<div class="stat-card">
+
+<h2>M-Pesa</h2>
+
+<p>
+Pay for academy packages using:
+</p>
+
+<br>
+
+<p>
+M-Pesa Number:
+<br>
+<strong>+254719663875</strong>
+</p>
+
+<br>
+
+<p>
+Account Name:
+<br>
+<strong>Charlie Bongo Forex Academy</strong>
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT FORM -->
+
+<section id="contact" style="padding:100px 8%;">
+
+<h2 class="section-title">Contact Me</h2>
+
+<div class="stat-card">
+
 <form>
-<input type="text" placeholder="Full Name">
-<input type="tel" placeholder="M-Pesa Number">
-<input type="number" placeholder="Amount">
-<textarea placeholder="Notes"></textarea>
-<button type="submit">Submit Request</button>
+
+<input
+type="text"
+placeholder="Your Name"
+required
+style="
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+">
+
+<input
+type="email"
+placeholder="Your Email"
+required
+style="
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+">
+
+<textarea
+placeholder="Your Message"
+required
+style="
+width:100%;
+height:150px;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+"></textarea>
+
+<button
+type="submit"
+class="btn">
+Send Message
+</button>
+
 </form>
+
 </div>
+
 </section>
+
+<!-- FOOTER -->
 
 <footer>
-<p>Charlie Bongo | Forex Academy</p>
-<p>Email: charliebongo16@gmail.com</p>
+
+<h2>Charlie Bongo Forex Academy</h2>
+
+<p>
+Forex Education • Financial Growth • Trading Success
+</p>
+
+<br>
+
+<p>
+Email:
+charliebongo16@gmail.com
+</p>
+
+<p>
+WhatsApp:
++254719663875
+</p>
+
+<br>
+
+<p>
+© 2026 Charlie Bongo Forex Academy.
+All Rights Reserved.
+</p>
+
 </footer>
+
+<script>
+
+// Counter Animation
+
+const counters = document.querySelectorAll('.stat-card h2');
+
+counters.forEach(counter=>{
+const updateCounter=()=>{
+const target=+counter.innerText.replace('+','');
+const count=+counter.getAttribute('data-count')||0;
+const increment=target/100;
+
+if(count<target){
+counter.setAttribute('data-count',count+increment);
+counter.innerText=Math.ceil(count+increment)+'+';
+setTimeout(updateCounter,20);
+}
+}
+updateCounter();
+});
+
+</script>
+
 </body>
 </html>
